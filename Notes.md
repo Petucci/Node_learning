@@ -9,3 +9,6 @@ List of commands:
 
 List of cool packages: 
 * nodemon -> allows hot refreshs, without restarting servers
+
+
+`__dirname` always points to same directory.
