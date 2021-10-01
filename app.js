@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static(path.join(localDir, 'public')));
 
-app.use('/admin', adminRoutes);
+app.use('/admin', adminRoutes.routes);
 app.use(shopRoutes);
 app.use(errorRoutes);
 
