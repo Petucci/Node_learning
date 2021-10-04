@@ -8,6 +8,7 @@ const path = require('path');
 const localDir = require('./util/path.js');
 
 const app = express();
+app.set('view engine', 'pug');
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
