@@ -11,7 +11,10 @@ router.get('/', (req, res, next) => {
     res.render('shop', 
     {
         products: products,
-        documentTitle: 'Shop'
+        siteDetails: {
+            path: '/',
+            title: 'Shop'
+        }
     })
 });
 
