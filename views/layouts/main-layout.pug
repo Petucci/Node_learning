@@ -1,5 +1,6 @@
 - let details = siteDetails
 
+
 doctype html
 html(lang="en")
     head
@@ -16,6 +17,10 @@ html(lang="en")
                     li.main-header__item
                         a(href="/", class=(details.path === '/' ? 'active' : '')) Shop
                     li.main-header__item
-                        a(href="/admin/add-product", class=(details.path === '/admin/add-product' ? 'active' : '')) Add Product
+                        a(href="/products", class=(details.path === '/products' ? 'active' : '')) Products
+                    li.main-header__item
+                        a(href="/cart", class=(details.path === '/cart' ? 'active' : '')) Cart
+                    li.main-header__item
+                        a(href="/admin/products", class=(details.path === '/admin/products' ? 'active' : '')) Admin Products
         main 
             block content 

@@ -2,7 +2,7 @@ const express = require('express');
 
 const adminRoutes = require('./routes/admin.js');
 const shopRoutes = require('./routes/shop.js');
-const errorRoutes = require('./routes/errors.js');
+const errorsController = require('./controllers/errors');
 
 const path = require('path');
 const localDir = require('./util/path.js');
@@ -17,6 +17,6 @@ app.use(express.static(path.join(localDir, 'public')));
 
 app.use('/admin', adminRoutes.routes);
 app.use(shopRoutes);
-app.use(errorRoutes);
+app.use(errorsController.NotFoundException);
 
 app.listen(3000);
