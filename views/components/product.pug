@@ -1,0 +1,11 @@
+mixin product-card(title, price, imageUrl, description)
+    article.card.product-item
+        header.card__header
+            h1.product__title #{title}
+        .card__image
+            img(src=`${imageUrl}`, alt="A book")
+        .card__content
+            h2.product__price #{price}€
+            p.product__description #{description}
+        .card__actions
+            button.btn Add to cart

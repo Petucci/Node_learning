@@ -1,0 +1,17 @@
+mixin add-product-form
+    .form-card 
+        h2 Add new product:
+        form.product-form(action="/admin/add-product", method="POST")
+            .form-control 
+                label(for="title") Title
+                input(type="text", name="title")#title
+            .form-control
+                label(for="price") Product price
+                input(type="number" name="price")#price        
+            .form-control
+                label(for="imageUrl") Image Url
+                input(type="url" name="imageUrl")#imageUrl        
+            .form-control
+                label(for="description") Description
+                textarea.form-text-area#description(name="description", cols="35", rows="10")
+            button.btn(type="submit") Add Product

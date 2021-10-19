@@ -12,7 +12,12 @@ exports.getProductsPage = (req, res, next) => {
 };
 
 exports.createProduct = (req, res, next) => {
-    let product = new Product(req.body.title);
+    let body = req.body;
+    let product = new Product(
+        body.title,
+        body.imageUrl,
+        body.description,
+        body.price);
     product.save();
     res.redirect('/');
 }

@@ -1,4 +1,5 @@
 extends ../layouts/main-layout.pug
+include ../components/product
 
 block styles
     link(rel="stylesheet", href="/css/product.css")
@@ -6,13 +7,4 @@ block styles
 block content 
     .grid
         each product in products
-            article.card.product-item
-                header.card__header
-                    h1.product__title #{product.title}
-                .card__image
-                    img(src="https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png", alt="A book")
-                .card__content
-                    h2.product__price 19.99$
-                    p.product__description description
-                .card__actions
-                    button.btn Add to cart
+            +product-card(product.title, product.price, product.imageUrl, product.description)

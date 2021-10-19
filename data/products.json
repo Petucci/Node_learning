@@ -1,1 +1,8 @@
-[{"title":"Book 1"},{"title":"Book 2"},{"title":"Book 3"},{"title":"dsadas"},{"title":"dsadasdas"}]
+[
+    {
+        "title": "Random book",
+        "imageUrl": "https://assets.entrepreneur.com/content/3x2/1300/publish-a-book-and-prosper-as-a-small-biz-owner.jpg",
+        "description": "Get a random book!",
+        "price": "213"
+    }
+]

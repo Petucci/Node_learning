@@ -22,3 +22,7 @@
 .product__description {
     text-align: center;
 }
+
+.product__image{ 
+    margin: 1rem;
+}
