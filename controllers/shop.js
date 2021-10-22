@@ -1,10 +1,17 @@
 const Product = require('../models/product');
+const ProductAction = require('../models/product-action');
+
+const supportedActions = [
+    new ProductAction('Add to cart')
+];
 
 exports.getShopPage = (req, res, next) => {
     Product.getAll(products => {
-        res.render('shop/product-list', 
-        {
-            products: products,
+        res.render('shop/product-list', {
+            products: products.map(product => ({
+                details: product,
+                actions: supportedActions
+            })),
             siteDetails: {
                 path: '/',
                 title: 'Shop'

@@ -1,4 +1,4 @@
-mixin product-card(title, price, imageUrl, description)
+mixin product-card(title, price, imageUrl, description, actions)
     article.card.product-item
         header.card__header
             h1.product__title #{title}
@@ -8,4 +8,6 @@ mixin product-card(title, price, imageUrl, description)
             h2.product__price #{price}€
             p.product__description #{description}
         .card__actions
-            button.btn Add to cart
+            if actions != undefined && actions.length > 0
+                for action in actions
+                    button.btn #{action.name}

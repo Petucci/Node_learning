@@ -12,8 +12,7 @@ const getProductsFromFile = (callback) => {
     fileSystem.readFile(productsFilePath, (error, content) => {
         if (error) {
             callback([])
-        }
-        else {
+        } else {
             callback(JSON.parse(content));
         }
     });
@@ -21,11 +20,11 @@ const getProductsFromFile = (callback) => {
 
 module.exports = class Product {
     constructor(
-            title,
-            imageUrl,
-            description,
-            price
-            ) {
+        title,
+        imageUrl,
+        description,
+        price,
+    ) {
         this.title = title;
         this.imageUrl = imageUrl;
         this.description = description;
@@ -41,8 +40,7 @@ module.exports = class Product {
         });
     }
 
-    static getAll(callback)
-    {
+    static getAll(callback) {
         getProductsFromFile(callback)
     };
 }

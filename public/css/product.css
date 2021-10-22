@@ -1,11 +1,13 @@
 .product-form {
     width: 20rem;
     max-width: 90%;
+    padding: 1rem;
 }
 
 .product-item {
     width: 20rem;
     max-width: 95%;
+    margin: 0.5rem;
 }
 
 .product__title {
@@ -23,6 +25,6 @@
     text-align: center;
 }
 
-.product__image{ 
+.product__image {
     margin: 1rem;
 }

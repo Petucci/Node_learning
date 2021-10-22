@@ -1,12 +1,16 @@
 extends ../layouts/main-layout.pug
 include ../components/add-product
+include ../components/product-list
 
 block styles
     link(rel="stylesheet", href="/css/product.css")
     link(rel="stylesheet", href="/css/forms.css")
 
 block content
-    +add-product-form
-    hr
-    h2 List of products:
-    
+    div
+        .card.inline.float-left(style="width: 70%")
+            .card__title List of products
+            .card__content
+                +product-list(products)
+        .inline.float-right
+            +add-product-form

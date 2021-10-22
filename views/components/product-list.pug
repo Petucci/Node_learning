@@ -1,0 +1,8 @@
+include product
+
+mixin product-list(products)
+    block content 
+        .grid
+            if products != undefinde && products.length > 0
+                each product in products
+                    +product-card(product.details.title, product.details.price, product.details.imageUrl, product.details.description, product.actions)
