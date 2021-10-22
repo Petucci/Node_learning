@@ -114,6 +114,10 @@ hr {
     display: inline;
 }
 
+.block {
+    display: block
+}
+
 .float-right {
     float: right;
 }

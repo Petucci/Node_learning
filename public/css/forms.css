@@ -19,7 +19,7 @@
     outline-color: #00695c;
 }
 
-.form-text-area {
+.form-control textarea {
+    width: 100%;
     resize: none;
-    columns: 30;
 }

@@ -8,9 +8,9 @@ block styles
 
 block content
     div
-        .card.inline.float-left(style="width: 70%")
+        .card.block.float-left(style="max-width: 74%; width: 100%;")
             .card__title List of products
             .card__content
                 +product-list(products)
-        .inline.float-right
+        .block.float-right(style="max-width: 25%; width:100%")
             +add-product-form
