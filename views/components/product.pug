@@ -10,4 +10,5 @@ mixin product-card(title, price, imageUrl, description, actions)
         .card__actions
             if actions != undefined && actions.length > 0
                 for action in actions
-                    button.btn #{action.name}
+                    form(action=`${action.link}` method=`${action.method}` style="display: inline")
+                        button.btn #{action.name}

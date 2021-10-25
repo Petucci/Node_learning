@@ -2,7 +2,7 @@ const Product = require('../models/product');
 const ProductAction = require('../models/product-action');
 
 const supportedActions = [
-    new ProductAction('Add to cart')
+    new ProductAction('Add to cart', '/add-to-cart')
 ];
 
 exports.getShopPage = (req, res, next) => {
@@ -37,3 +37,12 @@ exports.getProductsPage = (req, res, next) => {
         }
     });
 }
+
+exports.getOrdersPage = (req, res, next) => {
+    res.render('shop/orders', {
+        siteDetails: {
+            path: '/orders',
+            title: 'Orders'
+        }
+    });
+};
