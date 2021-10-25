@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 const fileSystem = require('fs');
 const localPath = require('../util/path');
 const path = require('path');
@@ -32,6 +33,7 @@ module.exports = class Product {
     }
 
     save() {
+        this.id = uuidv4();
         getProductsFromFile(products => {
             products.push(this);
             fileSystem.writeFile(productsFilePath, JSON.stringify(products), (error) => {
